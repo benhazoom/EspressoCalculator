@@ -32,5 +32,4 @@ The program also teaches to use a timer and a kitchen scale for espresso making 
 
 4.Calculating again after changing grinding size 
 
-<img width="560" alt="image" src="https://user-images.githubusercontent.com/87472603/206174104-1ede3ffe-3cc0-45f0-abb7-f6dfe1ef7280.png">
-
+<img width="561" alt="image" src="https://user-images.githubusercontent.com/87472603/206174477-6b65f1e4-f48c-4822-910d-2393174e5253.png">
