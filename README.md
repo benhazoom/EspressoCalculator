@@ -19,6 +19,7 @@ The program also teaches to use a timer and a kitchen scale for espresso making 
 ## 🔧 Running the application
 1. Download the project from the repository.
 2. Double-click on run file
+
 3.If needed install java on your computer
 
 ## 🎥 Demo
