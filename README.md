@@ -1,4 +1,4 @@
-# :coffee: EspressoCalculator
+### :coffee: EspressoCalculator
 
 This program utilizes information about espresso making for helping the beginner espresso maker by giving him tips and proper adjustments for making the perfect espresso shot. It's main logic is to figure if the espresso flow was to 'Fast' (lower then 100 score) or to 'Slow' (higher then 100 score) 
 
@@ -16,7 +16,12 @@ For each factor there is a guideline and there are more recommendation about the
 
 The program also teaches to use a timer and a kitchen scale for espresso making which are important for consistency and precision. It might not be as useful for the experienced barista but it is very useful for a beginner.
 
-# Demo
+## 🔧 Running the application
+1. Download the project from the repository.
+2. Double-click on run file
+3.If needed install java on your computer
+
+## 🎥 Demo
 
 1. The application started
 
