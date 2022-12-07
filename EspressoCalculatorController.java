@@ -8,9 +8,9 @@ import javafx.scene.text.Text;
 
 
 public class EspressoCalculatorController {
-	
-	//finals
-	public static final int MIN_BREWING_TIME = 25;
+
+    //finals
+    public static final int MIN_BREWING_TIME = 25;
     public static final int MAX_BREWING_TIME = 30;
 
     @FXML
@@ -39,7 +39,7 @@ public class EspressoCalculatorController {
 
     @FXML
     private Text scorefx;
-    
+
 
     @FXML
     private TextField timefx;
@@ -67,47 +67,56 @@ public class EspressoCalculatorController {
 
     @FXML
     void calculate(MouseEvent event) {
-    	int type = Integer.parseInt(typefx.getText()),error=1;
-        double 
-        grounded_coffee = Double.parseDouble(grounded_coffeefx.getText()),
-        grinder_setting = Double.parseDouble(grinder_settingfx.getText()),
-        time = Double.parseDouble(timefx.getText()),
-        output  = Double.parseDouble(outputfx.getText()),
-        pressure= Double.parseDouble(pressfx.getText());
+        int type = Integer.parseInt(typefx.getText()),error=1;
+        double
+                grounded_coffee = Double.parseDouble(grounded_coffeefx.getText()),
+                grinder_setting = Double.parseDouble(grinder_settingfx.getText()),
+                time = Double.parseDouble(timefx.getText()),
+                output  = Double.parseDouble(outputfx.getText()),
+                pressure= Double.parseDouble(pressfx.getText());
         double score = 100;
         int tip1=0,tip2=0,tip3=0,tip4=0;
         int recommended_amount;
-        
-        
+
+
+        //1.Type
         if (type==1) recommended_amount=11;
         else if (type==2) recommended_amount=18;
         else recommended_amount=24;
 
-        if ((grounded_coffee-recommended_amount)>1)
-        {
-            tip1= 1; //slow flow
-            score += (grounded_coffee-recommended_amount)*10;
-        }
-        if ((grounded_coffee-recommended_amount)<-1)
-        {
-            tip1=-1; //fast flow
-            score += (grounded_coffee-recommended_amount)*10;
-        }
-        if ((time-MAX_BREWING_TIME)>0) tip2= 1; //slow flow
-        if ((time-MIN_BREWING_TIME)<0) tip2=-1; //fast flow
-        score += (time-((MAX_BREWING_TIME+MIN_BREWING_TIME)/2))*1;
+        //2.Coffee Amount
+        if ((grounded_coffee-recommended_amount)>1) tip1= 1; //slow flow
+        if ((grounded_coffee-recommended_amount)<-1)tip1=-1; //fast flow
+        score += (grounded_coffee-recommended_amount)*10;
 
-        if (((grounded_coffee*2)-(output))>0) tip3= 1; // slow flow
-        if (((grounded_coffee*2)-(output))<0) tip3=-1; // fast flow
-        score += ((grounded_coffee*2)-(output))*1;
+        //3.Time Brewed
+        if (time!=0)
+        {
+            if ((time-MAX_BREWING_TIME)>0) tip2= 1; //slow flow
+            if ((time-MIN_BREWING_TIME)<0) tip2=-1; //fast flow
+            score += (time-((MAX_BREWING_TIME+MIN_BREWING_TIME)/2))*1;
+        }
 
-        if (pressure>9) tip4= 1; // slow flow
-        if (pressure<9) tip4=-1; // fast flow
-        
-         
-        
-        
-        
+
+        //4.Output Amount
+        if (output!=0)
+        {
+            if (((grounded_coffee*2)-(output))>0) tip3= 1; // slow flow
+            if (((grounded_coffee*2)-(output))<0) tip3=-1; // fast flow
+            score += ((grounded_coffee*2)-(output))*1;
+        }
+
+        //5.Pressure
+        if (pressure!=0)
+        {
+            if (pressure>9) tip4= 1; // slow flow
+            if (pressure<9) tip4=-1; // fast flow
+        }
+
+
+
+
+
         //FX
         String msg= "";
         scorefx.setText(""+score);
@@ -139,11 +148,11 @@ public class EspressoCalculatorController {
 
     @FXML
     void tips(MouseEvent event) {
-    	tipsVbox.setVisible(!(tipsVbox.isVisible()));
+        tipsVbox.setVisible(!(tipsVbox.isVisible()));
     }
-    
+
     public void initialize() {
-    	
+
     }
 
 }
