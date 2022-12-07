@@ -1,0 +1,99 @@
+<?xml version="1.0" encoding="UTF-8"?>
+
+<?import javafx.scene.control.Button?>
+<?import javafx.scene.control.TextField?>
+<?import javafx.scene.layout.ColumnConstraints?>
+<?import javafx.scene.layout.GridPane?>
+<?import javafx.scene.layout.HBox?>
+<?import javafx.scene.layout.RowConstraints?>
+<?import javafx.scene.layout.VBox?>
+<?import javafx.scene.text.Text?>
+
+<VBox maxHeight="-Infinity" maxWidth="-Infinity" minHeight="-Infinity" minWidth="-Infinity" prefHeight="530.0" prefWidth="747.0" xmlns="http://javafx.com/javafx/19" xmlns:fx="http://javafx.com/fxml/1" fx:controller="EspressoCalculatorController">
+   <children>
+      <Text strokeType="OUTSIDE" strokeWidth="0.0" text="Hello dear coffee maker this is a program designed to help you extract the most out of your espreesso shot" wrappingWidth="599.4700622558594" />
+      <Text layoutX="10.0" layoutY="23.0" strokeType="OUTSIDE" strokeWidth="0.0" text="would you like to see some espresso making tips ?" wrappingWidth="599.4700622558594" />
+      <Button fx:id="highbutton" mnemonicParsing="false" onMouseClicked="#tips" prefHeight="32.0" prefWidth="140.0" text="show/hide tips" />
+      <VBox fx:id="tipsVbox" prefHeight="22.0" prefWidth="747.0" visible="false">
+         <children>
+            <Text strokeType="OUTSIDE" strokeWidth="0.0" text="Recommended equipment: kitchen scale (at least 1gr accuracy) and a timer. " wrappingWidth="599.4700622558594" />
+            <Text strokeType="OUTSIDE" strokeWidth="0.0" text="Use propper amount of coffee beans for corresponding basket (a gram less or a gram more is okay more than that is not good)" wrappingWidth="599.4700622558594" />
+            <Text strokeType="OUTSIDE" strokeWidth="0.0" text="Single - 11g" />
+            <Text strokeType="OUTSIDE" strokeWidth="0.0" text="Double - 18g" />
+            <Text strokeType="OUTSIDE" strokeWidth="0.0" text="Triple - 24g " />
+            <Text strokeType="OUTSIDE" strokeWidth="0.0" text="Grind your beans in the grinder and write down the grind size" />
+            <Text strokeType="OUTSIDE" strokeWidth="0.0" text="Weight the grinded beans to make sure its the same as said before and write down the weight" />
+            <Text strokeType="OUTSIDE" strokeWidth="0.0" text="Thump the coffe pock, start brewing, start the timer, write down how long it took the shot (should be around 25-30 secounds)" />
+            <Text strokeType="OUTSIDE" strokeWidth="0.0" text="Write down the pressure inwhich the machine brewed " />
+            <Text strokeType="OUTSIDE" strokeWidth="0.0" text="Write down the finel output liquid weight (should be about twice as the grounded coffee weight)" />
+            <Text strokeType="OUTSIDE" strokeWidth="0.0" text="In summery there are 6 factors to write down - basket type,coffee weight,grinding size,brew time,output,pressure" />
+         </children>
+      </VBox>
+      <HBox prefHeight="230.0" prefWidth="747.0">
+         <children>
+            <GridPane fx:id="pressure" prefHeight="170.0" prefWidth="438.0">
+              <columnConstraints>
+                <ColumnConstraints hgrow="SOMETIMES" maxWidth="552.0" minWidth="10.0" prefWidth="408.0" />
+                  <ColumnConstraints hgrow="SOMETIMES" maxWidth="368.0" minWidth="10.0" prefWidth="33.0" />
+              </columnConstraints>
+              <rowConstraints>
+                <RowConstraints minHeight="10.0" prefHeight="30.0" vgrow="SOMETIMES" />
+                <RowConstraints minHeight="10.0" prefHeight="30.0" vgrow="SOMETIMES" />
+                <RowConstraints minHeight="10.0" prefHeight="30.0" vgrow="SOMETIMES" />
+                  <RowConstraints minHeight="10.0" prefHeight="30.0" vgrow="SOMETIMES" />
+                  <RowConstraints minHeight="10.0" prefHeight="30.0" vgrow="SOMETIMES" />
+                  <RowConstraints minHeight="10.0" prefHeight="30.0" vgrow="SOMETIMES" />
+              </rowConstraints>
+               <children>
+                  <Text strokeType="OUTSIDE" strokeWidth="0.0" text="please select basket type -  1 for single 2 for double 3 for triple" textAlignment="RIGHT" />
+                  <Text layoutX="384.0" layoutY="30.0" strokeType="OUTSIDE" strokeWidth="0.0" text="please enter the grind size (grinder setting)" textAlignment="RIGHT" GridPane.rowIndex="2" />
+                  <Text layoutX="10.0" layoutY="30.0" strokeType="OUTSIDE" strokeWidth="0.0" text="please enter the amount of coffee you brewed in grams" textAlignment="RIGHT" GridPane.rowIndex="1" />
+                  <Text layoutX="384.0" layoutY="90.0" strokeType="OUTSIDE" strokeWidth="0.0" text="please enter the brewing pressure in bar (enter 0 if not counted)" textAlignment="RIGHT" GridPane.rowIndex="5" />
+                  <Text layoutX="10.0" layoutY="30.0" strokeType="OUTSIDE" strokeWidth="0.0" text="please enter the finel output weight in grams (enter 0 if not counted)" textAlignment="RIGHT" GridPane.rowIndex="4" />
+                  <Text layoutX="10.0" layoutY="30.0" strokeType="OUTSIDE" strokeWidth="0.0" text="please enter the time took for brewing in secounds (enter 0 if not counted)" textAlignment="RIGHT" GridPane.rowIndex="3" />
+                  <TextField fx:id="typefx" GridPane.columnIndex="1" />
+                  <TextField fx:id="grounded_coffeefx" layoutX="445.0" layoutY="13.0" GridPane.columnIndex="1" GridPane.rowIndex="1" />
+                  <TextField fx:id="grinder_settingfx" layoutX="445.0" layoutY="43.0" GridPane.columnIndex="1" GridPane.rowIndex="2" />
+                  <TextField fx:id="timefx" layoutX="445.0" layoutY="73.0" GridPane.columnIndex="1" GridPane.rowIndex="3" />
+                  <TextField fx:id="outputfx" layoutX="445.0" layoutY="103.0" GridPane.columnIndex="1" GridPane.rowIndex="4" />
+                  <TextField fx:id="pressfx" layoutX="445.0" layoutY="133.0" GridPane.columnIndex="1" GridPane.rowIndex="5" />
+               </children>
+            </GridPane>
+            <VBox prefHeight="205.0" prefWidth="306.0">
+               <children>
+                  <GridPane prefHeight="29.0" prefWidth="306.0">
+                    <columnConstraints>
+                      <ColumnConstraints hgrow="SOMETIMES" minWidth="10.0" prefWidth="100.0" />
+                      <ColumnConstraints hgrow="SOMETIMES" minWidth="10.0" prefWidth="100.0" />
+                    </columnConstraints>
+                    <rowConstraints>
+                      <RowConstraints maxHeight="52.0" minHeight="10.0" prefHeight="19.0" vgrow="SOMETIMES" />
+                    </rowConstraints>
+                     <children>
+                        <Text strokeType="OUTSIDE" strokeWidth="0.0" text=" you'r Espresso score is :" textAlignment="RIGHT" wrappingWidth="134.171875" />
+                        <Text fx:id="scorefx" layoutX="10.0" layoutY="32.0" strokeType="OUTSIDE" strokeWidth="0.0" textAlignment="RIGHT" wrappingWidth="134.171875" GridPane.columnIndex="1" />
+                     </children>
+                  </GridPane>
+                  <Text fx:id="flowfx" strokeType="OUTSIDE" strokeWidth="0.0" textAlignment="RIGHT" wrappingWidth="304.171875" />
+               </children>
+            </VBox>
+         </children>
+      </HBox>
+      <GridPane>
+        <columnConstraints>
+            <ColumnConstraints hgrow="SOMETIMES" maxWidth="241.0" minWidth="10.0" prefWidth="29.0" />
+          <ColumnConstraints hgrow="SOMETIMES" maxWidth="461.0" minWidth="10.0" prefWidth="174.0" />
+          <ColumnConstraints hgrow="SOMETIMES" maxWidth="544.0" minWidth="10.0" prefWidth="544.0" />
+        </columnConstraints>
+        <rowConstraints>
+          <RowConstraints maxHeight="24.0" minHeight="1.0" prefHeight="1.0" vgrow="SOMETIMES" />
+          <RowConstraints maxHeight="70.0" minHeight="10.0" prefHeight="70.0" vgrow="SOMETIMES" />
+            <RowConstraints maxHeight="25.0" minHeight="10.0" prefHeight="18.0" vgrow="SOMETIMES" />
+        </rowConstraints>
+         <children>
+            <Button mnemonicParsing="false" onMouseClicked="#calculate" prefHeight="48.0" prefWidth="148.0" text="calculate" GridPane.columnIndex="1" GridPane.rowIndex="1" />
+            <Text fx:id="gtip" strokeType="OUTSIDE" strokeWidth="0.0" GridPane.columnIndex="2" GridPane.rowIndex="1" />
+         </children>
+      </GridPane>
+   </children>
+</VBox>
