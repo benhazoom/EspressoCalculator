@@ -33,3 +33,7 @@ The program also teaches to use a timer and a kitchen scale for espresso making 
 4.Calculating again after changing grinding size 
 
 <img width="561" alt="image" src="https://user-images.githubusercontent.com/87472603/206174477-6b65f1e4-f48c-4822-910d-2393174e5253.png">
+
+5.Calculating same shot but witout output weight and pressure counted
+
+<img width="560" alt="image" src="https://user-images.githubusercontent.com/87472603/206183224-c37a8c99-624e-4b74-b6ca-ed983e9920a9.png">
