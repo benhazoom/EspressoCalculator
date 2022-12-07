@@ -1,6 +1,6 @@
 # :coffee: EspressoCalculator
 
-This program utilizes information about espresso making for helping the beginner espresso maker by giving him tips and proper adjustments for making the perfect espresso shot. It's main logic is to figure if the espresso flow was to 'Fast' or to 'Slow' 
+This program utilizes information about espresso making for helping the beginner espresso maker by giving him tips and proper adjustments for making the perfect espresso shot. It's main logic is to figure if the espresso flow was to 'Fast' (lower then 100 score) or to 'Slow' (higher then 100 score) 
 
 By analyzing the user information inputted the application suggests (if needed) specific tips relating to the specific factor which made the anomaly from the “golden ratio” for making perfect textbook espresso shot.
 
@@ -24,8 +24,13 @@ The program also teaches to use a timer and a kitchen scale for espresso making 
 
 2. showing tips and writting down information about the espresso shot
 
-![Uploading image.png…]()
+<img width="561" alt="image" src="https://user-images.githubusercontent.com/87472603/206173887-253d1648-e561-4684-9af3-6e6246f38a54.png">
 
-3.
+3.Resault
 
+<img width="229" alt="image" src="https://user-images.githubusercontent.com/87472603/206173960-60841289-ff3f-46fe-90da-fbbd0c17746d.png">
+
+4.Calculating again after changing grinding size 
+
+<img width="560" alt="image" src="https://user-images.githubusercontent.com/87472603/206174104-1ede3ffe-3cc0-45f0-abb7-f6dfe1ef7280.png">
 
